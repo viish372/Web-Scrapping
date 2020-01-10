@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<HTML>
+<head>
+<style>
+td {
+font-size: 15px;
+font-family: "Times New Roman", Times, serif;
+box-sizing: content-box;
+width: 50px;
+height: 80px;
+padding: 5px;
+border: 1px solid blue;
+}
+th{
+font-size: 20px;
+font-family: "Times New Roman", Times, serif;
+box-sizing: content-box;
+border: 1px solid blue;
+}
+</style>
+
+</head>
+<BODY>
+<form action="/demo/" method='post' name='myform'>
+    {% csrf_token %}
+<div align="left">
+<center>
+<TABLE border="1">
+<tr>
+<td><input type='radio' name='r1' value='NIFTY'><br>NIFTY</td>
+<td><input type='radio' name='r1' value='ASHOKLEY'><br>ASHOKLEY</td>
+<td><input type='radio' name='r1' value='BEL'><br>BEL</td>
+<td><input type='radio' name='r1' value='CANBK'><br>CANBK</td>
+<td><input type='radio' name='r1' value='DABUR'><br>DABUR</td>
+<td><input type='radio' name='r1' value='GAIL'><br>GAIL</td>
+<td><input type='radio' name='r1' value='HINDALCO'><br>HINDALCO</td>
+<td><input type='radio' name='r1' value='INDUSINDBK'><br>INDUSINDBK</td>
+<td><input type='radio' name='r1' value='L&TFH'><br>L&TFH</td>
+<td><input type='radio' name='r1' value='MFSL'><br>MFSL</td>
+<td><input type='radio' name='r1' value='NIITTECH'><br>NIITTECH</td>
+<td><input type='radio' name='r1' value='PNB'><br>PNB</td>
+<td><input type='radio' name='r1' value='SIEMENS'><br>SIEMENS</td>
+<td><input type='radio' name='r1' value='TATASTEEL'><br>TATASTEEL</td>
+<td><input type='radio' name='r1' value='UPL'><br>UPL</td>
+</tr>
+
+<tr>
+<td><input type='radio' name='r1' value='BANKNIFTY'><br>BANKNIFTY</td>
+<td><input type='radio' name='r1' value='ASIANPAINT'><br>ASIANPAINT</td>
+<td><input type='radio' name='r1' value='BERGEPAINT'><br>BERGEPAINT</td>
+<td><input type='radio' name='r1' value='CASTROLIND'><br>CASTROLIND</td>
+<td><input type='radio' name='r1' value='DISHTV'><br>DISHTV</td>
+<td><input type='radio' name='r1' value='GLENMARK'><br>GLENMARK</td>
+<td><input type='radio' name='r1' value='HINDPETRO'><br>HINDPETRO</td>
+<td><input type='radio' name='r1' value='INFRATEL'><br>INFRATEL</td>
+<td><input type='radio' name='r1' value='LICHSGFIN'><br>LICHSGFIN</td>
+<td><input type='radio' name='r1' value='MGL'><br>MGL</td>
+<td><input type='radio' name='r1' value='NMDC'><br>NMDC</td>
+<td><input type='radio' name='r1' value='POWERGRID'><br>POWERGRID</td>
+<td><input type='radio' name='r1' value='SRF'><br>SRF</td>
+<td><input type='radio' name='r1' value='TCS'><br>TCS</td>
+<td><input type='radio' name='r1' value='VEDL'><br>VEDL</td>
+</tr>
+
+<tr>
+<td><input type='radio' name='r1' value='ACC'><br>ACC</td>
+<td><input type='radio' name='r1' value='AUROPHARMA'><br>AUROPHARMA</td>
+<td><input type='radio' name='r1' value='BHARATFORG'><br>BHARATFORG</td>
+<td><input type='radio' name='r1' value='CENTURYTEX'><br>CENTURYTEX</td>
+<td><input type='radio' name='r1' value='DIVISLAB'><br>DIVISLAB</td>
+<td><input type='radio' name='r1' value='GMRINFRA'><br>GMRINFRA</td>
+<td><input type='radio' name='r1' value='HINDUNILVR'><br>HINDUNILVR</td>
+<td><input type='radio' name='r1' value='INFY'><br>INFY</td>
+<td><input type='radio' name='r1' value='LT'><br>LT</td>
+<td><input type='radio' name='r1' value='MINDTREE'><br>MINDTREE</td>
+<td><input type='radio' name='r1' value='NTPC'><br>NTPC</td>
+<td><input type='radio' name='r1' value='PVR'><br>PVR</td>
+<td><input type='radio' name='r1' value='SRTRANSFIN<'><br>SRTRANSFIN</td>
+<td><input type='radio' name='r1' value='TECHM'><br>TECHM</td>
+<td><input type='radio' name='r1' value='VOLTAS'><br>VOLTAS</td>
+</tr>
+
+
+<tr>
+<td><input type='radio' name='r1' value='ADANIENT'><br>ADANIENT</td>
+<td><input type='radio' name='r1' value='AXISBANK'><br>AXISBANK</td>
+<td><input type='radio' name='r1' value='BHARTIARTL'><br>BHARTIARTL</td>
+<td><input type='radio' name='r1' value='CESC'><br>CESC</td>
+<td><input type='radio' name='r1' value='DLF'><br>DLF</td>
+<td><input type='radio' name='r1' value='GODREJCP'><br>GODREJCP</td>
+<td><input type='radio' name='r1' value='IBULHSGFIN'><br>IBULHSGFIN</td>
+<td><input type='radio' name='r1' value='IOC'><br>IOC</td>
+<td><input type='radio' name='r1' value='LUPIN'><br>LUPIN</td>
+<td><input type='radio' name='r1' value='MOTHERSUMI'><br>MOTHERSUMI</td>
+<td><input type='radio' name='r1' value='OIL'><br>OIL</td>
+<td><input type='radio' name='r1' value='RAMCOCEM'><br>RAMCOCEM</td>
+<td><input type='radio' name='r1' value='SUNPHARMA'><br>SUNPHARMA</td>
+<td><input type='radio' name='r1' value='TITAN'><br>TITAN</td>
+<td><input type='radio' name='r1' value='WIPRO'><br>WIPRO</td>
+</tr>
+
+<tr>
+<td><input type='radio' name='r1' value='ADANIPORTS'><br>ADANIPORTS</td>
+<td><input type='radio' name='r1' value='BAJAJ-AUTO'><br>BAJAJ-AUTO</td>
+<td><input type='radio' name='r1' value='BHEL'><br>BHEL</td>
+<td><input type='radio' name='r1' value='CHOLAFIN'><br>CHOLAFIN</td>
+<td><input type='radio' name='r1' value='DRREDDY'><br>DRREDDY</td>
+<td><input type='radio' name='r1' value='GRASIM'><br>GRASIM</td>
+<td><input type='radio' name='r1' value='ICICIBANK'><br>ICICIBANK</td>
+<td><input type='radio' name='r1' value='ITC'><br>ITC</td>
+<td><input type='radio' name='r1' value='M&M'><br>M&M</td>
+<td><input type='radio' name='r1' value='MRF'><br>MRF</td>
+<td><input type='radio' name='r1' value='ONGC'><br>ONGC</td>
+<td><input type='radio' name='r1' value='RBLBANK'><br>RBLBANK</td>
+<td><input type='radio' name='r1' value='SUNTV'><br>SUNTV</td>
+<td><input type='radio' name='r1' value='TORNTPHARM'><br>TORNTPHARM</td>
+<td><input type='radio' name='r1' value='YESBANK'><br>YESBANK</td>
+</tr>
+
+<tr>
+<td><input type='radio' name='r1' value='ADANIPOWER'><br>ADANIPOWER</td>
+<td><input type='radio' name='r1' value='BAJAJFINSV'><br>BAJAJFINSV</td>
+<td><input type='radio' name='r1' value='BIOCON'><br>BIOCON</td>
+<td><input type='radio' name='r1' value='CIPLA'><br>CIPLA</td>
+<td><input type='radio' name='r1' value='EICHERMOT'><br>EICHERMOT</td>
+<td><input type='radio' name='r1' value='HAVELLS'><br>HAVELLS</td>
+<td><input type='radio' name='r1' value='ICICIPRULI'><br>ICICIPRULI</td>
+<td><input type='radio' name='r1' value='JINDALSTEL'><br>JINDALSTEL</td>
+<td><input type='radio' name='r1' value='M&MFIN'><br>M&MFIN</td>
+<td><input type='radio' name='r1' value='MUTHOOTFIN'><br>MUTHOOTFIN</td>
+<td><input type='radio' name='r1' value='PAGEIND'><br>PAGEIND</td>
+<td><input type='radio' name='r1' value='RECLTD'><br>RECLTD</td>
+<td><input type='radio' name='r1' value='TATACHEM'><br>TATACHEM</td>
+<td><input type='radio' name='r1' value='TORNTPOWER'><br>TORNTPOWER</td>
+<td><input type='radio' name='r1' value='ZEEL'><br>ZEEL</td>
+</tr>
+
+
+
+<tr>
+<td><input type='radio' name='r1' value='AMARAJABAT'><br>AMARAJABAT</td>
+<td><input type='radio' name='r1' value='BAJFINANCE'><br>BAJFINANCE</td>
+<td><input type='radio' name='r1' value='BOSCHLTD'><br>BOSCHLTD</td>
+<td><input type='radio' name='r1' value='COALINDIA'><br>COALINDIA</td>
+<td><input type='radio' name='r1' value='EQUITAS'><br>EQUITAS</td>
+<td><input type='radio' name='r1' value='HCLTECH'><br>HCLTECH</td>
+<td><input type='radio' name='r1' value='IDEA'><br>IDEA</td>
+<td><input type='radio' name='r1' value='JSWSTEEL'><br>JSWSTEEL</td>
+<td><input type='radio' name='r1' value='MANAPPURAM'><br>MANAPPURAM</td>
+<td><input type='radio' name='r1' value='NATIONALUM'><br>NATIONALUM</td>
+<td><input type='radio' name='r1' value='PEL'><br>PEL</td>
+<td><input type='radio' name='r1' value='RELIANCE'><br>RELIANCE</td>
+<td><input type='radio' name='r1' value='TATAGLOBAL'><br>TATAGLOBAL</td>
+<td><input type='radio' name='r1' value='TVSMOTOR'><br>TVSMOTOR</td>
+<th><h1><input type='submit' name='submit' value='SHOW'></h1></th>
+</tr>
+
+
+<tr>
+<td><input type='radio' name='r1' value='AMBUJACEM'><br>AMBUJACEM</td>
+<td><input type='radio' name='r1' value='BALKRISIND'><br>BALKRISIND</td>
+<td><input type='radio' name='r1' value='BPCL'><br>BPCL</td>
+<td><input type='radio' name='r1' value='COLPAL'><br>COLPAL</td>
+<td><input type='radio' name='r1' value='ESCORTS'><br>ESCORTS</td>
+<td><input type='radio' name='r1' value='HDFC'><br>HDFC</td>
+<td><input type='radio' name='r1' value='IDFCFIRSTB'><br>IDFCFIRSTB</td>
+<td><input type='radio' name='r1' value='JUBLFOOD'><br>JUBLFOOD</td>
+<td><input type='radio' name='r1' value='MARICO'><br>MARICO</td>
+<td><input type='radio' name='r1' value='NBCC'><br>NBCC</td>
+<td><input type='radio' name='r1' value='PETRONET'><br>PETRONET</td>
+<td><input type='radio' name='r1' value='SAIL'><br>SAIL</td>
+<td><input type='radio' name='r1' value='TATAMOTORS'><br>TATAMOTORS</td>
+<td><input type='radio' name='r1' value='UBL'><br>UBL</td>
+
+</tr>
+
+
+<tr>
+<td><input type='radio' name='r1' value='APOLLOHOSP'><br>APOLLOHOSP</td>
+<td><input type='radio' name='r1' value='BANKBARODA'><br>BANKBARODA</td>
+<td><input type='radio' name='r1' value='BRITANNIA'><br>BRITANNIA</td>
+<td><input type='radio' name='r1' value='CONCOR'><br>CONCOR</td>
+<td><input type='radio' name='r1' value='EXIDEIND'><br>EXIDEIND</td>
+<td><input type='radio' name='r1' value='HDFCBANK'><br>HDFCBANK</td>
+<td><input type='radio' name='r1' value='IGL'><br>IGL</td>
+<td><input type='radio' name='r1' value='JUSTDIAL'><br>JUSTDIAL</td>
+<td><input type='radio' name='r1' value='MARUTI'><br>MARUTI</td>
+<td><input type='radio' name='r1' value='NCC'><br>NCC</td>
+<td><input type='radio' name='r1' value='PFC'><br>PFC</td>
+<td><input type='radio' name='r1' value='SBIN'><br>SBIN</td>
+<td><input type='radio' name='r1' value='ATAMTRDVR'><br>ATAMTRDVR</td>
+<td><input type='radio' name='r1' value='UJJIVAN'><br>UJJIVAN</td>
+
+</tr>
+
+
+
+<tr>
+<td><input type='radio' name='r1' value='APOLLOTYRE'><br>APOLLOTYRE</td>
+<td><input type='radio' name='r1' value='BATAINDIA'><br>BATAINDIA</td>
+<td><input type='radio' name='r1' value='CADILAHC'><br>CADILAHC</td>
+<td><input type='radio' name='r1' value='CUMMINSIND'><br>CUMMINSIND</td>
+<td><input type='radio' name='r1' value='FEDERALBNK'><br>FEDERALBNK</td>
+<td><input type='radio' name='r1' value='HEROMOTOCO'><br>HEROMOTOCO</td>
+<td><input type='radio' name='r1' value='INDIGO'><br>INDIGO</td>
+<td><input type='radio' name='r1' value='KOTAKBANK'><br>KOTAKBANK</td>
+<td><input type='radio' name='r1' value='MCDOWELL'><br>MCDOWELL-N</td>
+<td><input type='radio' name='r1' value='NESTLEIND'><br>NESTLEIND</td>
+<td><input type='radio' name='r1' value='PIDILITIND'><br>PIDILITIND</td>
+<td><input type='radio' name='r1' value='SHREECEM'><br>SHREECEM</td>
+<td><input type='radio' name='r1' value='TATAPOWER'><br>TATAPOWER</td>
+<td><input type='radio' name='r1' value='ULTRACEMCO'><br>ULTRACEMCO</td>
+
+</tr>
+</TABLE>
+</center>
+</div>
+</form>
+</BODY>
+</HTML>

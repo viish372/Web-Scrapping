@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<HTML>
+<head>
+<style>
+td {
+font-size: 18px;
+font-color:red;
+font-family: "Times New Roman", Times, serif;
+box-sizing: content-box;
+width: 35px;
+height: 2px;
+padding: 3px;
+border: 2px solid blue;
+}
+
+ </style>
+
+</head>
+<BODY>
+<h3><div align="center">NSE DATA</div></h3>
+<FORM action=' ' method='post' name='myform'>
+     {% csrf_token %}
+<CENTER>
+<a href="{%url 'index'%}">BACK</a>
+<TABLE BORDER=1 >
+    <tr>
+<th colspan=2><CENTER>Contract:</CENTER></th>
+<td colspan=2><CENTER> {{cc}}</CENTER></td>
+<th rowspan=4><CENTER>STRIKE PRICE</CENTER></th>
+<th colspan=2><CENTER>Expiary date:</CENTER></th>
+<td colspan=2><CENTER> {{e_dt}}</CENTER></td>
+</tr>
+<tr>
+<th colspan=2><CENTER>Spot price:</CENTER></th>
+<td colspan=2><CENTER> {{sp}}</CENTER></td>
+<th colspan=2><CENTER>Working days:</CENTER></th>
+<td colspan=2><CENTER>-</CENTER></td>
+</tr>
+<tr>
+<th colspan=4><CENTER>CALLS</CENTER></th>
+<th colspan=4><CENTER>PUTS</CENTER></th>
+</tr>
+<tr>
+<th><CENTER>Largest OI</CENTER></th>
+<th><CENTER>Largest change in OI</CENTER></th>
+<th><CENTER>Largest volume</CENTER></th>
+<th><CENTER> IV </CENTER></th>
+<th><CENTER>Largest OI</CENTER></th>
+<th><CENTER>Largest change in OI</CENTER></th>
+<th><CENTER>Largest volume</CENTER></th>
+<th><CENTER> IV </CENTER></th>
+</tr>
+<tr>
+<td>{{largest_calls_oi}}</td>
+<td>{{ largest_calls_change_in_oi }}</td>
+<td>{{largest_calls_volume}}</td>
+<td>{{calls_iv}}</td>
+<td>{{nearest_Strike_P}}</td>
+<td>{{large_put_oi}}</td>
+<td>{{largest_puts_change_in_oi}}</td>
+<td>{{largest_puts_volume}}</td>
+<td>{{put_iv}}</td>
+</tr>
+</TABLE>
+<TABLE BORDER=1>
+<tr>
+<th colspan="6"><CENTER>RESULTS</CENTER></th>
+</tr>
+<tr>
+<th colspan=3><CENTER>CALLS</CENTER></th>
+<th colspan=3><CENTER>PUTS</CENTER></th>
+</tr>
+<tr>
+<th><CENTER> OI</CENTER></th>
+<th><CENTER> change in OI</CENTER></th>
+<th><CENTER> volume</CENTER></th>
+<th><CENTER> OI</CENTER></th>
+<th><CENTER> change in OI</CENTER></th>
+<th><CENTER> volume</CENTER></th>
+</tr>
+<tr>
+<td>{{Normal_dist_large_calls_oi}}</td>
+<td>{{Normal_dist_large_calls_change_in_oi}}</td>
+<td>{{Normal_dist_large_calls_volume}}</td>
+<td>{{Normal_dist_large_puts_oi}}</td>
+<td>{{Normal_dist_large_puts_change_in_oi}}</td>
+<td>{{Normal_dist_large_puts_volume}}</td>
+</tr>
+<tr>
+<th>NOTE:</th>
+<td colspan=5>-</td>
+</tr>
+</TABLE>
+</CENTER>
+
+<CENTER>
+<TABLE BORDER=1 >
+    <tr>
+<th colspan=2><CENTER>Contract:</CENTER></th>
+<td colspan=2><CENTER>{{cc_d1}} </CENTER></td>
+<th rowspan=4><CENTER>STRIKE PRICE</CENTER></th>
+<th colspan=2><CENTER>Expiary date:</CENTER></th>
+<td colspan=2><CENTER>{{e_dt_d1}}</CENTER></td>
+</tr>
+<tr>
+<th colspan=2><CENTER>Spot price:</CENTER></th>
+<td colspan=2><CENTER>{{sp_d1}}</CENTER></td>
+<th colspan=2><CENTER>Working days:</CENTER></th>
+<td colspan=2><CENTER>- </CENTER></td>
+</tr>
+<tr>
+<th colspan=4><CENTER>CALLS</CENTER></th>
+<th colspan=4><CENTER>PUTS</CENTER></th>
+</tr>
+<tr>
+<th><CENTER>Largest OI</CENTER></th>
+<th><CENTER>Largest change in OI</CENTER></th>
+<th><CENTER>Largest volume</CENTER></th>
+<th><CENTER> IV </CENTER></th>
+<th><CENTER>Largest OI</CENTER></th>
+<th><CENTER>Largest change in OI</CENTER></th>
+<th><CENTER>Largest volume</CENTER></th>
+<th><CENTER> IV </CENTER></th>
+</tr>
+<tr>
+<td>{{calls_iv_d1}}</td>
+<td>{{largest_calls_change_in_oi_d1}}</td>
+<td>{{largest_calls_volume_d1}}</td>
+<td>{{calls_iv_d1}}</td>
+<td>{{nearest_Strike_P_d1}}</td>
+<td>{{large_put_oi_d1}}</td>
+<td>{{largest_puts_change_in_oi_d1}}</td>
+<td>{{largest_puts_volume_d1}}</td>
+<td>{{put_iv_d1}}</td>
+</tr>
+</TABLE>
+<TABLE BORDER=1>
+<tr>
+<th colspan="6"><CENTER>RESULTS</CENTER></th>
+</tr>
+<tr>
+<th colspan=3><CENTER>CALLS</CENTER></th>
+<th colspan=3><CENTER>PUTS</CENTER></th>
+</tr>
+<tr>
+<th><CENTER> OI</CENTER></th>
+<th><CENTER> change in OI</CENTER></th>
+<th><CENTER> volume</CENTER></th>
+<th><CENTER> OI</CENTER></th>
+<th><CENTER> change in OI</CENTER></th>
+<th><CENTER> volume</CENTER></th>
+</tr>
+<tr>
+<td>{{Normal_dist_large_calls_oi_d1}}</td>
+<td>{{Normal_dist_large_calls_change_in_oi_d1}}</td>
+<td>{{Normal_dist_large_calls_volume_d1}}</td>
+<td>{{Normal_dist_large_puts_oi_d1}}</td>
+<td>{{Normal_dist_large_puts_change_in_oi_d1}}</td>
+<td>{{Normal_dist_large_puts_volume_d1}}</td>
+</tr>
+<tr>
+<th>NOTE:</th>
+<td colspan=5>-</td>
+</tr>
+</TABLE>
+</CENTER>
+    <CENTER>
+<TABLE BORDER=1 >
+    <tr>
+<th colspan=2><CENTER>Contract:</CENTER></th>
+<td colspan=2><CENTER>{{cc_d2}}</CENTER></td>
+<th rowspan=4><CENTER>STRIKE PRICE</CENTER></th>
+<th colspan=2><CENTER>Expiary date:</CENTER></th>
+<td colspan=2><CENTER>{{e_dt_d2}}</CENTER></td>
+</tr>
+<tr>
+<th colspan=2><CENTER>Spot price:</CENTER></th>
+<td colspan=2><CENTER>{{sp_d2}}</CENTER></td>
+<th colspan=2><CENTER>Working days:</CENTER></th>
+<td colspan=2><CENTER>-</CENTER></td>
+</tr>
+<tr>
+<th colspan=4><CENTER>CALLS</CENTER></th>
+<th colspan=4><CENTER>PUTS</CENTER></th>
+</tr>
+<tr>
+<th><CENTER>Largest OI</CENTER></th>
+<th><CENTER>Largest change in OI</CENTER></th>
+<th><CENTER>Largest volume</CENTER></th>
+<th><CENTER> IV </CENTER></th>
+<th><CENTER>Largest OI</CENTER></th>
+<th><CENTER>Largest change in OI</CENTER></th>
+<th><CENTER>Largest volume</CENTER></th>
+<th><CENTER> IV </CENTER></th>
+</tr>
+<tr>
+<td>{{calls_iv_d2}}</td>
+<td>{{largest_calls_change_in_oi_d2}}</td>
+<td>{{largest_calls_volume_d2}}</td>
+<td>{{calls_iv_d2}}</td>
+<td>{{nearest_Strike_P_d2}}</td>
+<td>{{large_put_oi_d2}}</td>
+<td>{{largest_puts_change_in_oi_d2}}</td>
+<td>{{largest_puts_volume_d2}}</td>
+<td>{{put_iv_d2}}</td>
+</tr>
+</TABLE>
+<TABLE BORDER=1>
+<tr>
+<th colspan="6"><CENTER>RESULTS</CENTER></th>
+</tr>
+<tr>
+<th colspan=3><CENTER>CALLS</CENTER></th>
+<th colspan=3><CENTER>PUTS</CENTER></th>
+</tr>
+<tr>
+<th><CENTER> OI</CENTER></th>
+<th><CENTER> change in OI</CENTER></th>
+<th><CENTER> volume</CENTER></th>
+<th><CENTER> OI</CENTER></th>
+<th><CENTER> change in OI</CENTER></th>
+<th><CENTER> volume</CENTER></th>
+</tr>
+<tr>
+<td>{{Normal_dist_large_calls_oi_d2}}</td>
+<td>{{Normal_dist_large_calls_change_in_oi_d2}}</td>
+<td>{{Normal_dist_large_calls_volume_d2}}</td>
+<td>{{Normal_dist_large_puts_oi_d2}}</td>
+<td>{{Normal_dist_large_puts_change_in_oi_d2}}</td>
+<td>{{Normal_dist_large_puts_volume_d2}}</td>
+</tr>
+<tr>
+<th>NOTE:</th>
+<td colspan=5>-</td>
+</tr>
+</TABLE>
+</CENTER>
+</TABLE>
+</CENTER>
+</FORM>
+</BODY>
+</HTML>
