@@ -1,0 +1,64 @@
+<html>
+<head>
+<style>
+td {
+font-size: 15px;
+font-family: "Times New Roman", Times, serif;
+box-sizing: content-box;
+width: 100px;
+height: 73px;
+padding: 8px;
+border: 2px solid black;
+}
+input {
+font-size: 25px;
+font-family: "Times New Roman", Times, serif;
+width: 350px;
+height: 50px;
+}
+h3{
+width: 200px;
+}
+</style>
+</head>
+<form action="/demo/" method="post">
+ {% csrf_token %}
+<center>
+<table border='1'>
+<tr>
+<td colspan='2'>
+<center><a href='https://kite.trade/connect/login?api_key=nf3b7k253eeuc9wz&v=3' target="_blank"><h1>Login to Get Request Token</h1></a></center>
+</td>
+</tr>
+<tr>
+<td>
+<h3>
+Enter Request Token:
+</h3>
+</td>
+<td>
+<textarea cols="35" name='request1'></textarea>
+
+</td>
+</tr>
+<tr>
+<td>
+<h3>
+Enter Profit/Loss Limit:
+</h3>
+</td>
+<td>
+<textarea cols="35" name='pnl'></textarea>
+</td>
+</tr>
+<tr>
+<td colspan='2'>
+<h1>
+<center><input type='Submit' name='Submit' value='Submit'></center>
+</h1>
+</td>
+</tr>
+</table>
+</center>
+</form>
+</html>
