@@ -19,5 +19,4 @@ def access2(r_t,pnl):
     with open('data.json') as json_file:
         data1 = json.load(json_file)
     print(data1)
-    print(data["access_token"])
-
+    print(data1["access_token"])
